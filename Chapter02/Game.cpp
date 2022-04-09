@@ -110,7 +110,7 @@ void Game::UpdateGame()
 		mShip->SetLastShoot(SDL_GetTicks());
 		mMissile = new Missile(this);
 		mMissile->SetPosition(Vector2(mShip->GetPosition().x + 60, mShip->GetPosition().y));
-		mMissile->SetScale(0.05f);
+		mMissile->SetScale(0.04f);
 	}
 
 	// Update all actors

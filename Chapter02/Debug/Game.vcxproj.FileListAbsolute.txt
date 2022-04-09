@@ -2,3 +2,4 @@ C:\Users\belmo\OneDrive\Área de Trabalho\Códigos_game\code-master\Chapter02\De
 C:\Users\belmo\OneDrive\Área de Trabalho\Códigos_game\code-master\Chapter02\Debug\Game.pdb
 C:\Users\unifthsilva\Downloads\shipStar\Chapter02\Debug\Game.exe
 C:\Users\thiag\Downloads\shipStar\Chapter02\Debug\Game.exe
+C:\Users\unifthsilva\Downloads\CC7140_Shipstar-main\Chapter02\Debug\Game.exe
