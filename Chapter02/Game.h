@@ -27,6 +27,8 @@ public:
 	void RemoveSprite(class SpriteComponent* sprite);
 
 	bool Cooldown(Uint32 LastTick, float CooldowDuration);
+
+	void SpawnComet();
 	
 	SDL_Texture* GetTexture(const std::string& fileName);
 private:
@@ -63,4 +65,7 @@ private:
 	Uint32 LastCometTick;
 
 	int mScore; // Game's score
+
+	// Bullshit fly my way and i keep walkin
+	bool this_comet_gonna_hit;
 };

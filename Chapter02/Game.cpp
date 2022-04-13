@@ -16,6 +16,7 @@
 #include "Missile.h"
 #include "Comet.h"
 #include <ctime>
+#include <time.h> 
 #include <cstdlib>
 #include <iostream>
 
@@ -61,6 +62,10 @@ bool Game::Initialize()
 	LoadData();
 
 	mTicksCount = SDL_GetTicks();
+
+	LastCometTick = mTicksCount + 1;
+
+	this_comet_gonna_hit = true;
 	
 	return true;
 }
@@ -110,6 +115,54 @@ bool Game::Cooldown(Uint32 LastTick, float CooldowDuration)
 
 }
 
+void Game::SpawnComet()
+{
+	srand(time(NULL));
+
+	// Should You Spawn Comets = SYSC
+	int SYSC = 1 + (rand() % 100000);
+
+	//cout << "SYSC = " << SYSC << endl;
+
+	if (SYSC > 1) {
+
+		mComet = new Comet(this);
+		mComet->SetScale(1.0f);
+		//mComet->SetRotation((rand() % 50));
+		
+		// Comet Spwan Point = CSP
+		int CSP = (rand() % 3);
+
+		//cout << "CSP = " << CSP << endl;
+
+		// Spawn comet in the lower right corner
+		if (CSP == 0) {
+			mComet->SetPosition(Vector2((rand() % 178) + 896, (rand() % 50) + 768));
+			mComet->SetRightSpeed(-1 * (51 + (rand() % 450)));
+			mComet->SetDownSpeed(-1 * (101 + (rand() % 400)));
+		}
+		// Spawn comet in the right side
+		else if (CSP == 1) {
+			mComet->SetPosition(Vector2((rand() % 50) + 1024, (rand() % 768)));
+			mComet->SetRightSpeed(-1 * (51 + (rand() % 450)));
+			if ((rand() % 2) == 0) {
+				mComet->SetDownSpeed(-1 * (51 + (rand() % 450)));
+			}
+			else {
+				mComet->SetDownSpeed(51 + (rand() % 450));
+			}
+
+		}
+		// Spawn comet in the upper right corner
+		else if (CSP == 2) {
+			mComet->SetPosition(Vector2((rand() % 178) + 896, (rand() % 50) - 50));
+			mComet->SetRightSpeed(-1 * (51 + (rand() % 450)));
+			mComet->SetDownSpeed(101 + (rand() % 400));
+		}
+
+	}
+}
+
 void Game::UpdateGame()
 {
 	// Compute delta time
@@ -136,11 +189,56 @@ void Game::UpdateGame()
 
 		LastCometTick = mTicksCount;
 
-		mComet->SpawnComet(this, mComet);
+		//SpawnComet();
+
+		/*mUpdatingActors = true;
+		AddActor(mComet);
+		mUpdatingActors = false;*/
 
 	}
 
+	if (this_comet_gonna_hit) {
+		mComet = new Comet(this);
+		mComet->SetPosition(Vector2(250.0f, 384.0f));
+		mComet->SetScale(1.0f);
+		this_comet_gonna_hit = false;
+	}
+
 	// Check collisions
+	for (auto actor : mActors)
+	{
+		class Actor* actor;
+
+		Vector2 ship_pos = mShip->GetPosition();
+
+		for (int i = 0; i < mActors.size(); i++) {
+			/*
+			* mActors[i]->GetType() :
+			*	0 = Ship
+			*	1 = Background
+			*	2 = Missile
+			*	3 = Comet
+			*/
+
+
+			if (mActors[i]->GetType() == actor->EEnemy &&
+				(mActors[i]->GetPosition().x >= ship_pos.x && mActors[i]->GetPosition().x <= ship_pos.x + 70) &&
+				(mActors[i]->GetPosition().y >= ship_pos.y && mActors[i]->GetPosition().y <= ship_pos.y + 30)) {
+				cout << "FOK, DEY RIT DA XHIP" << endl;
+				mIsRunning = false;
+			}
+			/*if (mActors[i]->GetType() != 0 && mActors[i]->GetType() != 1 && mActors[i]->GetType() != 2) {
+				cout << "i = " << i << endl;
+				cout << "Type = " << mActors[i]->GetType() << endl;
+				cout << "PosX = " << mActors[i]->GetPosition().x << endl;
+				cout << "PosY = " << mActors[i]->GetPosition().y << endl;
+			}*/
+			
+		}
+
+		//mIsRunning = false;
+
+	}
 
 	// Update all actors
 	mUpdatingActors = true;

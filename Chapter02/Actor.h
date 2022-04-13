@@ -21,9 +21,10 @@ public:
 
 	enum Type //possiveis tipos de ator
 	{
-		EEnemy,
+		EBackgroung,
 		EShip,
-		EProjectile
+		EProjectile,
+		EEnemy
 	};
 
 	Actor(class Game* game);//construtor e destrutor

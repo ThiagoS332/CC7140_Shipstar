@@ -13,7 +13,6 @@ class Comet : public Actor
 public:
 	Comet(class Game* game);
 	void UpdateActor(float deltaTime) override;
-	void SpawnComet(class Game* game, class Comet* mComet);
 	void SetRightSpeed(float mRightSpeed);
 	void SetDownSpeed(float mDownSpeed);
 	float GetRightSpeed() const { return mRightSpeed; }

@@ -13,6 +13,7 @@ BGSpriteComponent::BGSpriteComponent(class Actor* owner, int drawOrder)
 	:SpriteComponent(owner, drawOrder)
 	,mScrollSpeed(0.0f)
 {
+	mOwner->SetType(mOwner->EBackgroung);
 }
 
 void BGSpriteComponent::Update(float deltaTime)

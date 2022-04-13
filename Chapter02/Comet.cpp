@@ -10,6 +10,14 @@
 #include "AnimSpriteComponent.h"
 #include "Game.h"
 #include <iostream>
+#include <stdio.h>
+#include <stdlib.h> 
+#include <ctime>
+#include <time.h> 
+#include <cstdlib>
+#include <iostream>
+
+using namespace std;
 
 Comet::Comet(Game* game)
 	:Actor(game)
@@ -55,50 +63,4 @@ void Comet::UpdateActor(float deltaTime)
 		SetState(EDead);
 	}
 	SetPosition(pos);
-}
-
-void Comet::SpawnComet(class Game* game, class Comet* mComet)
-{
-	srand(time(0));
-
-	// Should You Spawn Comets = SYSC
-	int SYSC = 1 + (rand() % 100000);
-
-	if (SYSC > 10000) {
-
-		SYSC = 0;
-
-		mComet = new Comet(game);
-		mComet->SetScale(1.0f);
-		//mComet->SetRotation((rand() % 50));
-
-		// Comet Spwan Point = CSP
-		int CSP = (rand() % 3);
-
-		// Spawn comet in the lower right corner
-		if (CSP == 0) {
-			mComet->SetPosition(Vector2((rand() % 178) + 896, (rand() % 50) + 768));
-			mComet->SetRightSpeed(-1 * (51 + (rand() % 450)));
-			mComet->SetDownSpeed(-1 * (101 + (rand() % 400)));
-		}
-		// Spawn comet in the right side
-		else if (CSP == 1) {
-			mComet->SetPosition(Vector2((rand() % 178) + 1024, (rand() % 50) + 768));
-			mComet->SetRightSpeed(-1 * (51 + (rand() % 450)));
-			if ((rand() % 2) == 0) {
-				mComet->SetDownSpeed(-1 * (51 + (rand() % 450)));
-			}
-			else {
-				mComet->SetDownSpeed(51 + (rand() % 450));
-			}
-
-		}
-		// Spawn comet in the upper right corner
-		else if (CSP == 2) {
-			mComet->SetPosition(Vector2((rand() % 178) + 1024, (rand() % 50) - 50));
-			mComet->SetRightSpeed(-1 * (51 + (rand() % 450)));
-			mComet->SetDownSpeed(101 + (rand() % 400));
-		}
-
-	}
 }
