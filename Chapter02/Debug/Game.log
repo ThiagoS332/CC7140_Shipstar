@@ -1,15 +1,33 @@
-﻿  Missile.cpp
-  Game.vcxproj -> C:\Users\unifthsilva\Downloads\CC7140_Shipstar-main\Chapter02\Debug\Game.exe
-  C:\Users\unifthsilva\Downloads\CC7140_Shipstar-main\Chapter02\\..\external\SDL\lib\win\x86\libfreetype-6.dll
-  C:\Users\unifthsilva\Downloads\CC7140_Shipstar-main\Chapter02\\..\external\SDL\lib\win\x86\libogg-0.dll
-  C:\Users\unifthsilva\Downloads\CC7140_Shipstar-main\Chapter02\\..\external\SDL\lib\win\x86\libpng16-16.dll
-  C:\Users\unifthsilva\Downloads\CC7140_Shipstar-main\Chapter02\\..\external\SDL\lib\win\x86\libvorbis-0.dll
-  C:\Users\unifthsilva\Downloads\CC7140_Shipstar-main\Chapter02\\..\external\SDL\lib\win\x86\libvorbisfile-3.dll
-  C:\Users\unifthsilva\Downloads\CC7140_Shipstar-main\Chapter02\\..\external\SDL\lib\win\x86\SDL2.dll
-  C:\Users\unifthsilva\Downloads\CC7140_Shipstar-main\Chapter02\\..\external\SDL\lib\win\x86\SDL2_image.dll
-  C:\Users\unifthsilva\Downloads\CC7140_Shipstar-main\Chapter02\\..\external\SDL\lib\win\x86\SDL2_mixer.dll
-  C:\Users\unifthsilva\Downloads\CC7140_Shipstar-main\Chapter02\\..\external\SDL\lib\win\x86\SDL2_ttf.dll
-  C:\Users\unifthsilva\Downloads\CC7140_Shipstar-main\Chapter02\\..\external\SDL\lib\win\x86\zlib1.dll
-  10 arquivo(s) copiado(s)
-  C:\Users\unifthsilva\Downloads\CC7140_Shipstar-main\Chapter02\\..\external\GLEW\lib\win\x86\glew32.dll
-  1 arquivo(s) copiado(s)
+﻿  Comet.cpp
+F:\Arquivos\FEI\Dev de Jogos\CC7140_Shipstar-main\Chapter02\Comet.cpp(60,12): warning C4244: 'argumento': conversão de 'time_t' para 'unsigned int', possível perda de dados
+F:\Arquivos\FEI\Dev de Jogos\CC7140_Shipstar-main\Chapter02\Comet.cpp(78,68): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+F:\Arquivos\FEI\Dev de Jogos\CC7140_Shipstar-main\Chapter02\Comet.cpp(78,47): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+F:\Arquivos\FEI\Dev de Jogos\CC7140_Shipstar-main\Chapter02\Comet.cpp(79,29): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+F:\Arquivos\FEI\Dev de Jogos\CC7140_Shipstar-main\Chapter02\Comet.cpp(80,28): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+F:\Arquivos\FEI\Dev de Jogos\CC7140_Shipstar-main\Chapter02\Comet.cpp(84,69): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+F:\Arquivos\FEI\Dev de Jogos\CC7140_Shipstar-main\Chapter02\Comet.cpp(84,47): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+F:\Arquivos\FEI\Dev de Jogos\CC7140_Shipstar-main\Chapter02\Comet.cpp(85,29): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+F:\Arquivos\FEI\Dev de Jogos\CC7140_Shipstar-main\Chapter02\Comet.cpp(87,29): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+F:\Arquivos\FEI\Dev de Jogos\CC7140_Shipstar-main\Chapter02\Comet.cpp(90,29): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+F:\Arquivos\FEI\Dev de Jogos\CC7140_Shipstar-main\Chapter02\Comet.cpp(96,69): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+F:\Arquivos\FEI\Dev de Jogos\CC7140_Shipstar-main\Chapter02\Comet.cpp(96,47): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+F:\Arquivos\FEI\Dev de Jogos\CC7140_Shipstar-main\Chapter02\Comet.cpp(97,29): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+F:\Arquivos\FEI\Dev de Jogos\CC7140_Shipstar-main\Chapter02\Comet.cpp(98,29): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+  Game.cpp
+F:\Arquivos\FEI\Dev de Jogos\CC7140_Shipstar-main\Chapter02\Game.cpp(129,55): warning C4244: 'argumento': conversão de 'Uint32' para 'float', possível perda de dados
+F:\Arquivos\FEI\Dev de Jogos\CC7140_Shipstar-main\Chapter02\Game.cpp(130,35): warning C4244: 'argumento': conversão de 'Uint32' para 'float', possível perda de dados
+  Gerando Código...
+  Game.vcxproj -> F:\Arquivos\FEI\Dev de Jogos\CC7140_Shipstar-main\Chapter02\Debug\Game.exe
+  F:\Arquivos\FEI\Dev de Jogos\CC7140_Shipstar-main\Chapter02\\..\external\SDL\lib\win\x86\libfreetype-6.dll
+  F:\Arquivos\FEI\Dev de Jogos\CC7140_Shipstar-main\Chapter02\\..\external\SDL\lib\win\x86\libogg-0.dll
+  F:\Arquivos\FEI\Dev de Jogos\CC7140_Shipstar-main\Chapter02\\..\external\SDL\lib\win\x86\libpng16-16.dll
+  F:\Arquivos\FEI\Dev de Jogos\CC7140_Shipstar-main\Chapter02\\..\external\SDL\lib\win\x86\libvorbis-0.dll
+  F:\Arquivos\FEI\Dev de Jogos\CC7140_Shipstar-main\Chapter02\\..\external\SDL\lib\win\x86\libvorbisfile-3.dll
+  F:\Arquivos\FEI\Dev de Jogos\CC7140_Shipstar-main\Chapter02\\..\external\SDL\lib\win\x86\SDL2.dll
+  F:\Arquivos\FEI\Dev de Jogos\CC7140_Shipstar-main\Chapter02\\..\external\SDL\lib\win\x86\SDL2_image.dll
+  F:\Arquivos\FEI\Dev de Jogos\CC7140_Shipstar-main\Chapter02\\..\external\SDL\lib\win\x86\SDL2_mixer.dll
+  F:\Arquivos\FEI\Dev de Jogos\CC7140_Shipstar-main\Chapter02\\..\external\SDL\lib\win\x86\SDL2_ttf.dll
+  F:\Arquivos\FEI\Dev de Jogos\CC7140_Shipstar-main\Chapter02\\..\external\SDL\lib\win\x86\zlib1.dll
+  10 File(s) copied
+  F:\Arquivos\FEI\Dev de Jogos\CC7140_Shipstar-main\Chapter02\\..\external\GLEW\lib\win\x86\glew32.dll
+  1 File(s) copied

@@ -19,6 +19,13 @@ public:
 		EDead
 	};
 
+	enum Type //possiveis tipos de ator
+	{
+		EEnemy,
+		EShip,
+		EProjectile
+	};
+
 	Actor(class Game* game);//construtor e destrutor
 	virtual ~Actor();
 
@@ -40,6 +47,9 @@ public:
 	State GetState() const { return mState; }
 	void SetState(State state) { mState = state; }
 
+	Type GetType() const { return mType; }
+	void SetType(Type type) { mType = type; }
+
 	class Game* GetGame() { return mGame; }
 
 
@@ -50,6 +60,9 @@ public:
 private:
 	// estado
 	State mState;
+
+	// tipo
+	Type mType;
 
 	// coordenadas do ator, assim como sua escala e parâmetro para rotação
 	Vector2 mPosition;

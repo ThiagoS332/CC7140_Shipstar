@@ -16,4 +16,5 @@ public:
 private:
 	float mRightSpeed;
 	float mDownSpeed;
+	float mMissileDamage;
 };

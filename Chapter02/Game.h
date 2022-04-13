@@ -25,6 +25,8 @@ public:
 
 	void AddSprite(class SpriteComponent* sprite);
 	void RemoveSprite(class SpriteComponent* sprite);
+
+	bool Cooldown(Uint32 LastTick, float CooldowDuration);
 	
 	SDL_Texture* GetTexture(const std::string& fileName);
 private:
@@ -49,10 +51,16 @@ private:
 	SDL_Renderer* mRenderer;
 	Uint32 mTicksCount;
 	bool mIsRunning;
+
 	// Track if we're updating actors right now
 	bool mUpdatingActors;
 
 	// Game-specific
 	class Ship* mShip; // Player's ship
 	class Missile* mMissile; // Player's missile
+
+	class Comet* mComet; // Comet
+	Uint32 LastCometTick;
+
+	int mScore; // Game's score
 };

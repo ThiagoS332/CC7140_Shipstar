@@ -14,6 +14,12 @@
 #include "Actor.h"
 #include "Ship.h"
 #include "Missile.h"
+#include "Comet.h"
+#include <ctime>
+#include <cstdlib>
+#include <iostream>
+
+using namespace std;
 
 Game::Game()
 :mWindow(nullptr)
@@ -92,6 +98,18 @@ void Game::ProcessInput()
 	mShip->ProcessKeyboard(state);
 }
 
+bool Game::Cooldown(Uint32 LastTick, float CooldowDuration)
+{
+	float time_elapsed = (mTicksCount - LastTick) / 1000.0f;
+
+	if (time_elapsed >= CooldowDuration) {
+		return true;
+	}
+
+	return false;
+
+}
+
 void Game::UpdateGame()
 {
 	// Compute delta time
@@ -112,6 +130,17 @@ void Game::UpdateGame()
 		mMissile->SetPosition(Vector2(mShip->GetPosition().x + 60, mShip->GetPosition().y));
 		mMissile->SetScale(0.04f);
 	}
+
+	// Spawn comets
+	if (Cooldown(LastCometTick, 1.0f)) {
+
+		LastCometTick = mTicksCount;
+
+		mComet->SpawnComet(this, mComet);
+
+	}
+
+	// Check collisions
 
 	// Update all actors
 	mUpdatingActors = true;

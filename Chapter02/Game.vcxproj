@@ -14,9 +14,9 @@
     <ClCompile Include="Actor.cpp" />
     <ClCompile Include="AnimSpriteComponent.cpp" />
     <ClCompile Include="BGSpriteComponent.cpp" />
+    <ClCompile Include="Comet.cpp" />
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="Game.cpp" />
-    <ClCompile Include="Grog.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Math.cpp" />
     <ClCompile Include="Missile.cpp" />
@@ -27,9 +27,9 @@
     <ClInclude Include="Actor.h" />
     <ClInclude Include="AnimSpriteComponent.h" />
     <ClInclude Include="BGSpriteComponent.h" />
+    <ClInclude Include="Comet.h" />
     <ClInclude Include="Component.h" />
     <ClInclude Include="Game.h" />
-    <ClInclude Include="Grog.h" />
     <ClInclude Include="Math.h" />
     <ClInclude Include="Missile.h" />
     <ClInclude Include="Ship.h" />
